@@ -61,11 +61,21 @@
 
 ### Erzeugen von Publisher
 
-+++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java&lang=java
-@[43](Flux erzeugen)
-@[24-25](Flux mit Iterable erzeugen)
-@[56](Mono erzeugen)
-@[50](Mono ohne Inhalt erzeugen)
+```
+Mono<String> mono = Mono.just("Josh");
+Mono<String> emptyMono = Mono.empty();
+
+Flux<String> flux = Flux.just("Bryan", "Dominic");
+Flux<Integer> numbersFromOneToTen = Flux.range(1, 10);
+List<String> names = Arrays.asList("Bryan", "Dominic", "Arlyne", "Truman", "Audie");
+        Flux<String> flux = Flux.fromIterable(names);
+```
+@[1](Mono erzeugen)
+@[2](Mono ohne Inhalt erzeugen)
+@[4](Flux erzeugen)
+@[5](Flux als Bereich erzeugen)
+@[6-7](Flux mit Iterable erzeugen)
+
 +++
 
 ### Interaktion
