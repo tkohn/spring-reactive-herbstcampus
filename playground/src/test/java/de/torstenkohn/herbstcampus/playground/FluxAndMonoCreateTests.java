@@ -1,8 +1,6 @@
 package de.torstenkohn.herbstcampus.playground;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -20,8 +18,6 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
  * @author Torsten Kohn
  */
 public class FluxAndMonoCreateTests {
-
-    private static Logger log = LoggerFactory.getLogger(FluxAndMonoCreateTests.class);
 
     @Test
     public void creatingFluxFromIterable(){
