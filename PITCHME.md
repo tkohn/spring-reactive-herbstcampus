@@ -8,12 +8,12 @@
 ### Inhalt
 
 * Vorstellung
-** Über mich
-** comSysto
+ * Über mich
+ * comSysto
 * Einleitung
-** Was ist Reaktive Programmierung?
-** Vor- und Nachteile
-** Implementierungen
+ * Was ist Reaktive Programmierung?
+ * Vor- und Nachteile
+ * Implementierungen
 * Code-Beispiele mit Reactor
 * Reactive Programmierung mit Spring
 
