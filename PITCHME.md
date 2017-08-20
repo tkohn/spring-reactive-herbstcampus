@@ -1,25 +1,24 @@
 ---
 
-# Reaktive Programmierung mit Java und Spring
+### Reaktive Programmierung 
+#### mit Java und Spring
 
 ---
 
-## Vorstellung
+### Vorstellung
 
 +++
 
-## Inhalt
+### Inhalt
 
 +++
 
-## Torsten
+### Torsten
 
 +++
 
-## comSysto
+### comSysto
 
 ---
 
-## Einleitung
-
----
+### Einleitung
