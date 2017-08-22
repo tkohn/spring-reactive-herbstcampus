@@ -30,7 +30,7 @@
 
 <i class="fa fa-xing-square"></i> [xing.com/profile/Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
 
-![Profilbild von Torsten Kohn](/assets/profil_tk.jpg)
+<img class="profile-picture" src="/assets/profil_tk.jpg" alt="Profilbild von Torsten Kohn">
 
 +++
 
