@@ -23,7 +23,8 @@
 
 +++
 
-### Torsten
+### Torsten Kohn
+<i class="fa fa-twitter"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
 
 +++
 
@@ -63,22 +64,25 @@
 
 ```
 Mono<String> mono = Mono.just("Josh");
+
 Mono<String> emptyMono = Mono.empty();
 
 Flux<String> flux = Flux.just("Bryan", "Dominic");
+
 Flux<Integer> numbersFromOneToTen = Flux.range(1, 10);
-List<String> names = Arrays.asList("Bryan", "Dominic", "Arlyne", "Truman", "Audie");
-        Flux<String> flux = Flux.fromIterable(names);
+
+List<String> names = Arrays.asList("Bryan", "Dominic");
+Flux<String> flux = Flux.fromIterable(names);
 ```
 @[1](Mono erzeugen)
-@[2](Mono ohne Inhalt erzeugen)
-@[4](Flux erzeugen)
-@[5](Flux als Bereich erzeugen)
-@[6-7](Flux mit Iterable erzeugen)
+@[3](Mono ohne Inhalt erzeugen)
+@[5](Flux erzeugen)
+@[7](Flux als Bereich erzeugen)
+@[9-10](Flux mit Iterable erzeugen)
 
 +++
 
-### Interaktion
+### Interaktion - Subscribe
 
 +++
 
@@ -87,3 +91,6 @@ List<String> names = Arrays.asList("Bryan", "Dominic", "Arlyne", "Truman", "Audi
 ---
 
 ### Reaktive Programmierung mit Spring
+
++++
+
