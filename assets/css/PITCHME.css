@@ -1,7 +1,15 @@
 .profile-picture{
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 300px;
+    top: 0;
+    right: 0;
+    height: 70%;
 }
 
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal section  ul{
+    list-style-type: none;
+}
