@@ -1,6 +1,7 @@
 .profile-picture{
     position: absolute;
-    top: 8px;
-    right: 16px;
-    height: 50%;
+    top: 0px;
+    right: 0px;
+    width: 300px;
 }
+

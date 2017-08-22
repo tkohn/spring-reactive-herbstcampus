@@ -24,11 +24,12 @@
 +++
 
 ### Torsten Kohn
-<i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
 
-<i class="fa fa-github-square"></i> [github.com/tkohn](https://github.com/tkohn)
-
-<i class="fa fa-xing-square"></i> [xing.com/profile/Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
+<div class="left-align">
+    <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
+    <i class="fa fa-github-square"></i> [github.com/tkohn](https://github.com/tkohn)
+    <i class="fa fa-xing-square"></i> [xing.com/profile/Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
+</div>
 
 <img class="profile-picture" src="/assets/profil_tk.jpg" alt="Profilbild von Torsten Kohn">
 
