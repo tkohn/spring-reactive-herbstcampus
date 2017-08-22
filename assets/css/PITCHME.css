@@ -1,7 +1,7 @@
 .profile-picture{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 30px;
+    right: 8px;
     height: 100%;
 }
 
