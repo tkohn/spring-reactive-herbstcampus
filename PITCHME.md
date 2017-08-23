@@ -32,7 +32,7 @@
 * <i class="fa fa-xing-square"></i> [Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
 
 <img class="profile-picture" src="/assets/profil_tk.jpg" alt="Profilbild von Torsten Kohn">
-<a href="https://www.comsysto.com" target="_blank"><img class="company-picture" src="/assets/logo-normal-jpg.jpg" alt="Firmenlogo von comSysto GmbH"></a>
+<img class="company-picture" src="/assets/logo-normal-jpg.jpg" alt="Firmenlogo von comSysto GmbH">
 
 ---
 
