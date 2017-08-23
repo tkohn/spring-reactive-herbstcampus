@@ -34,9 +34,11 @@
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
 
-- Programmierparadigma |
-- Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET |
-- Standardisierung für JVM durch [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) |
+<ul>
+    <li class="fragment">Programmierparadigma</li>
+    <li class="fragment">Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET</li>
+    <li class="fragment">Standardisierung für JVM durch <a target="_blank" href="https://github.com/reactive-streams/reactive-streams-jvm">Reactive Streams</a></li>
+</ul>
 
 Note:
 Programmierparadigma, welches sich an Datenflüsse orientiert.
