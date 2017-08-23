@@ -11,6 +11,7 @@
   <li><i class="fa fa-twitter-square"></i> <a target="_blank" href="https://twitter.com/TorstenKohn">@TorstenKohn</a></li>
   <li><i class="fa fa-github-square"></i> <a target="_blank" href="https://github.com/tkohn">tkohn</a></li>
   <li><i class="fa fa-xing-square"></i> <a target="_blank" href="https://www.xing.com/profile/Torsten_Kohn4">Torsten_Kohn4</a></li>
+  <li><i class="fa fa-building-o"></i> <a target="_blank" href="https://comsysto.com/">comSysto</a></li>
 </ul>
 +++
 
@@ -86,19 +87,19 @@ hot vs cold
     <th>Java 9 Flow</th>
     <th>Reactor 3</th> 
   </tr>
-  <tr>
+  <tr class="fragment">
     <td>Java</td>
     <td>6+</td>
     <td>9+</td>
     <td>8+</td>
   </tr>
-  <tr>
+  <tr class="fragment">
     <td>Publisher</td>
     <td>Flowable, Observable, Single, Maybe, Completable</td>
     <td>selbst implementieren</td>
     <td>Mono, Flux</td>
    </tr>
-  <tr>
+  <tr class="fragment">
     <td>Subscriber</td>
     <td>...</td>
     <td>selbst implementieren</td>
@@ -118,15 +119,20 @@ Note:
 ### Erzeugen von Publisher
 
 ---?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
+
 @[58](Mono erzeugen)
 @[52](Mono ohne Inhalt erzeugen)
 @[44-45](Flux erzeugen)
 @[33](Flux als Bereich erzeugen)
 @[24-26](Flux mit Iterable erzeugen)
 
-+++
++++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoSubscribeTest.java
 
 ### Interaktion - Subscribe
+
+@[14-20]
+@[26-36]
+@[42-62]
 
 +++
 
@@ -134,7 +140,12 @@ Note:
 
 ---
 
-# Reaktive Programmierung mit Spring
+## Reaktive Programmierung 
+### mit Java und Spring
+
+- Spring Framework von Pivotal |
+- Open Source - Apache License |
+- nutzt Reactor |
 
 +++
 
@@ -159,7 +170,28 @@ ab Servlet Version 3.1
 - Apache Cassandra
 - Redis
 
+Note:
+JDBC soll evtl. in einer reaktiven Version kommen
+
 ---
+
+# Fazit
+
+Note:
+TODO - Zusammenfassung
+
++++
+
+### Wann lohnt sich der Einsatz?
+
+- Technologien entscheiden
+- Wissen der Mitarbeiter
+
+Note:
+Wenn an unterester Stelle eine reaktive Komponente (MongoDB) verwendet wird, 
+dann sollte man darauf aufbauen und reaktiv Entwickeln
+
++++
 
 ## Quellen
 
