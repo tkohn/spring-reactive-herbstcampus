@@ -21,3 +21,7 @@
 .reveal section .hide-list-style-type {
     list-style-type: none;
 }
+
+.reveal section h3 {
+    text-transform: none;
+}

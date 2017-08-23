@@ -1,12 +1,12 @@
 
-### Reaktive Programmierung 
-#### mit Java und Spring
+# Reaktive Programmierung 
+## mit Java und Spring
 
 +++
 
-### Torsten Kohn
-##### Lean Java Expert
-##### bei comSysto GmbH in München
+## Torsten Kohn
+### Lean Java Expert
+### bei comSysto in München
 <ul class="hide-list-style-type">
   <li><i class="fa fa-twitter-square"></i> <a target="_blank" href="https://twitter.com/TorstenKohn">@TorstenKohn</a></li>
   <li><i class="fa fa-github-square"></i> <a target="_blank" href="https://github.com/tkohn">tkohn</a></li>
@@ -31,31 +31,33 @@
 
 ### Was ist Reaktive Programmierung?
 
-* Programmierparadigma
-* Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET
-* Standardisierung für JVM durch Reactive Streams
-
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
+
+- Programmierparadigma |
+- Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET |
+- Standardisierung für JVM durch [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) |
 
 Note:
 Programmierparadigma, welches sich an Datenflüsse orientiert.
 Änderungen in den Datenflüssen automatisch propagiert.
 Beispiel: Excel - Wert in Zelle ändert sich und Summenzelle wird neu berechnet
-Interfaces & Interaktionsregeln finden sich auch in Java 9 (Flow) wieder
+Observer pattern + Iterator pattern + functional programming = reactive programming
 Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 +++
 
-### Vorteile
+### [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+#### Interfaces
+
+- Publisher
+- Subscriber
+- Subscription
+- Processor
 
 +++
 
-### Nachteile
-
-+++
-
-### Implementierungen
+### Vergleich Implementierungen
 
 <table>
   <tr>
@@ -70,13 +72,22 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
     <td>9+</td>
     <td>8+</td>
   </tr>
-    <tr>
-      <td>Typen</td>
-      <td>...</td>
-      <td>...</td>
-      <td>Mono, Flux</td>
-    </tr>
+  <tr>
+    <td>Publisher Typen</td>
+    <td>Flowable, Observable, Single, Maybe, Completable</td>
+    <td>implement Publisher</td>
+    <td>Mono, Flux</td>
+   </tr>
+  <tr>
+    <td>Subscriber Typen</td>
+    <td>...</td>
+    <td>implement Subscriber</td>
+    <td>...</td>
+   </tr>
 </table>
+
+Note:
+...
 
 ---
 
@@ -107,3 +118,21 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 +++
 
+### ...
+
+- Tomcat
+- Jetty
+- Netty
+- Undertow
+
+### Datenbanken 
+
+- MongoDB
+- Apache Cassandra
+- Redis
+
+---
+
+### 
+
+- 
