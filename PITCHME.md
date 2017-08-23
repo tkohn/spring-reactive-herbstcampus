@@ -138,8 +138,8 @@ Note:
 +++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/ErrorHandlingTests.java
 
 @[15-26](verhält sich wie try/catch)
-@[31-42](Default zurückgeben)
-@[47-56](Sequenz wiederholen)
+@[31-43](Default zurückgeben)
+@[48-57](Sequenz wiederholen)
 
 ### Error Handling
 

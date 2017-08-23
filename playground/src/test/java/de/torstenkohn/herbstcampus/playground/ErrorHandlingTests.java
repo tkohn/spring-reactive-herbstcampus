@@ -35,7 +35,8 @@ public class ErrorHandlingTests {
       }
       return "a number: " + n;
     })
-    .onErrorResume(e -> e.getMessage().contains("3"), e -> Flux.just("42"))
+    .onErrorResume(e -> e.getMessage().contains("3"),
+    e -> Flux.just("42"))
     .subscribe(
     value -> System.out.println("value: " + value),
     error -> System.out.println("error" + error.getMessage())
