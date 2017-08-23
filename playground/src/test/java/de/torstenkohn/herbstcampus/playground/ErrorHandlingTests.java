@@ -15,14 +15,16 @@ public class ErrorHandlingTests {
     Flux.range(1, 10)
       .map(n -> {
         if (n % 3 == 0) {
-          throw new IllegalArgumentException("Wrong input: " + n);
+          throw new IllegalArgumentException(
+            "Wrong input: " + n);
         }
         return n;
       })
       .map(n -> String.valueOf(n + 10))
       .subscribe(
         value -> System.out.println("value: " + value),
-        error -> System.out.println("error" + error.getMessage())
+        error -> System.out.println(
+          "error" + error.getMessage())
       );
   }
 
@@ -31,7 +33,8 @@ public class ErrorHandlingTests {
     Flux.range(1, 10)
       .map(n -> {
         if (n == 3) {
-          throw new IllegalArgumentException("Wrong input: " + n);
+          throw new IllegalArgumentException(
+            "Wrong input: " + n);
         }
         return "a number: " + n;
       })
@@ -39,7 +42,8 @@ public class ErrorHandlingTests {
         e -> Flux.just("42"))
       .subscribe(
         value -> System.out.println("value: " + value),
-        error -> System.out.println("error" + error.getMessage())
+        error -> System.out.println(
+          "error" + error.getMessage())
       );
   }
 

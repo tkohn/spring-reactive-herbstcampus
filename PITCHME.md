@@ -131,15 +131,15 @@ Note:
 
 @[14-20](ohne 'Subscriber' passiert nichts)
 @[26-36](cold Publisher)
-@[41-53](hot Publisher)
+@[42-57](hot Publisher)
 
 ### Interaktion - Subscribe
 
 +++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/ErrorHandlingTests.java
 
-@[15-26](verhält sich wie try/catch)
-@[31-43](Default zurückgeben)
-@[48-57](Sequenz wiederholen)
+@[15-28](verhält sich wie try/catch)
+@[33-47](Default zurückgeben)
+@[52-61](Sequenz wiederholen)
 
 ### Error Handling
 
