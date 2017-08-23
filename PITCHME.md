@@ -101,11 +101,11 @@ Note:
 ### Erzeugen von Publisher
 
 ---?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
-@[57](Mono erzeugen)
-@[51](Mono ohne Inhalt erzeugen)
+@[58](Mono erzeugen)
+@[52](Mono ohne Inhalt erzeugen)
 @[44-45](Flux erzeugen)
-@[34](Flux als Bereich erzeugen)
-@[25-27](Flux mit Iterable erzeugen)
+@[33](Flux als Bereich erzeugen)
+@[24-26](Flux mit Iterable erzeugen)
 
 +++
 
