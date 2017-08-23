@@ -19,10 +19,10 @@
 
 * Einführung
  * Was ist Reaktive Programmierung?
- * Reactive Streams
- * Implementierungen
+ * Reactive Streams Spezifikation
+ * Vergleich Implementierungen
 * Code-Beispiele - Reactor
-* Reactive Programmierung mit Spring
+* Reaktive Programmierung mit Spring
  * Demo
  * Voraussetzungen
 * Fazit
