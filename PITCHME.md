@@ -1,25 +1,6 @@
----
 
 ### Reaktive Programmierung 
 #### mit Java und Spring
-
-+++
-
-### Inhalt
-
-* Vorstellung
- * Über mich
- * comSysto
-* Einleitung
- * Was ist Reaktive Programmierung?
- * Vor- und Nachteile
- * Implementierungen
-* Code-Beispiele mit Reactor
-* Reactive Programmierung mit Spring
-
----
-
-### Vorstellung
 
 +++
 
@@ -27,12 +8,20 @@
 ##### Lean Java Expert
 ##### bei comSysto GmbH in München
 
-* <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
+* <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn) <!-- .element: class="hide-list-style-type" -->
 * <i class="fa fa-github-square"></i> [tkohn](https://github.com/tkohn)
 * <i class="fa fa-xing-square"></i> [Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
 
-<img class="profile-picture" src="/assets/profil_tk.jpg" alt="Profilbild von Torsten Kohn">
-<img class="company-picture" src="/assets/logo-normal-jpg.jpg" alt="Firmenlogo von comSysto GmbH">
++++
+
+### Inhalt
+
+* Einleitung
+ * Was ist Reaktive Programmierung?
+ * Vor- und Nachteile
+ * Implementierungen
+* Code-Beispiele mit Reactor
+* Demo - Reactive Programmierung mit Spring
 
 ---
 
@@ -44,8 +33,7 @@
 
 * Programmierparadigma
 * Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET
-* Standardisierung durch Reactive Streams:
- * Interfaces & Interaktionsregeln für die JVM
+* Standardisierung für JVM durch Reactive Streams
 
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
@@ -69,9 +57,26 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 ### Implementierungen
 
-* RxJava
-* Java 9 - Flow API
-* Reactor
+<table>
+  <tr>
+    <th></th>
+    <th>RxJava 2</th>
+    <th>Java 9 Flow</th>
+    <th>Reactor 3</th> 
+  </tr>
+  <tr>
+    <td>Java Version</td>
+    <td>6+</td>
+    <td>9+</td>
+    <td>8+</td>
+  </tr>
+    <tr>
+      <td>Typen</td>
+      <td>...</td>
+      <td>...</td>
+      <td>Mono, Flux</td>
+    </tr>
+</table>
 
 ---
 
@@ -81,23 +86,12 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 ### Erzeugen von Publisher
 
-```
-Mono<String> mono = Mono.just("Josh");
-
-Mono<String> emptyMono = Mono.empty();
-
-Flux<String> flux = Flux.just("Bryan", "Dominic");
-
-Flux<Integer> numbersFromOneToTen = Flux.range(1, 10);
-
-List<String> names = Arrays.asList("Bryan", "Dominic");
-Flux<String> flux = Flux.fromIterable(names);
-```
-@[1](Mono erzeugen)
-@[3](Mono ohne Inhalt erzeugen)
-@[5](Flux erzeugen)
-@[7](Flux als Bereich erzeugen)
-@[9-10](Flux mit Iterable erzeugen)
+---?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
+@[56](Mono erzeugen)
+@[50](Mono ohne Inhalt erzeugen)
+@[43-44](Flux erzeugen)
+@[33](Flux als Bereich erzeugen)
+@[24-26](Flux mit Iterable erzeugen)
 
 +++
 

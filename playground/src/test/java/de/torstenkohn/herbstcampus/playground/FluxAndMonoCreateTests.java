@@ -21,7 +21,8 @@ public class FluxAndMonoCreateTests {
 
     @Test
     public void creatingFluxFromIterable(){
-        List<String> names = Arrays.asList("Bryan", "Dominic", "Arlyne", "Truman", "Audie");
+        List<String> names = Arrays.asList("Bryan", "Dominic",
+                "Arlyne", "Truman", "Audie");
         Flux<String> flux = Flux.fromIterable(names);
         Mono<Long> numberOfEntries = flux.count();
         assertThat(numberOfEntries.block()).isEqualTo(5);
@@ -40,7 +41,8 @@ public class FluxAndMonoCreateTests {
 
     @Test
     public void creatingFluxWithJust(){
-        Flux<String> flux = Flux.just("Bryan", "Dominic", "Arlyne", "Truman", "Audie");
+        Flux<String> flux = Flux.just("Bryan", "Dominic",
+                "Arlyne", "Truman", "Audie");
         Mono<Long> numberOfEntries = flux.count();
         assertThat(numberOfEntries.block()).isEqualTo(5);
     }
