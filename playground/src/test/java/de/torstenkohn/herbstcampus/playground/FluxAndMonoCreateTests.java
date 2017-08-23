@@ -20,31 +20,9 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 public class FluxAndMonoCreateTests {
 
   @Test
-  public void creatingFluxFromIterable() {
-    List<String> names = Arrays.asList("Bryan", "Dominic",
-    "Arlyne", "Truman", "Audie");
-    Flux<String> flux = Flux.fromIterable(names);
-    Mono<Long> numberOfEntries = flux.count();
-    assertThat(numberOfEntries.block()).isEqualTo(5);
-  }
-
-  @Test
-  public void creatingFluxRangeFromOneToTen() {
-    Flux<Integer> numbersFromOneToTen = Flux.range(1, 10);
-    numbersFromOneToTen
-    .map(number -> {
-      assertThat(number).isBetween(1, 10);
-      return number;
-    })
-    .subscribe(System.out::println);
-  }
-
-  @Test
-  public void creatingFluxWithJust() {
-    Flux<String> flux = Flux.just("Bryan", "Dominic",
-    "Arlyne", "Truman", "Audie");
-    Mono<Long> numberOfEntries = flux.count();
-    assertThat(numberOfEntries.block()).isEqualTo(5);
+  public void creatingMonoWithJust() {
+    Mono<String> mono = Mono.just("Josh");
+    assertThat(mono.block()).isEqualTo("Josh");
   }
 
   @Test
@@ -54,16 +32,38 @@ public class FluxAndMonoCreateTests {
   }
 
   @Test
-  public void creatingMonoWithJust() {
-    Mono<String> mono = Mono.just("Josh");
-    assertThat(mono.block()).isEqualTo("Josh");
-  }
-
-  @Test
   public void creatingMonoFromCallable() {
     Callable<String> callable = () -> "Peter";
     Mono<String> mono = Mono.fromCallable(callable);
     assertThat(mono.block()).isEqualTo("Peter");
+  }
+
+  @Test
+  public void creatingFluxWithJust() {
+    Flux<String> flux = Flux.just("Bryan", "Dominic",
+      "Arlyne", "Truman", "Audie");
+    Mono<Long> numberOfEntries = flux.count();
+    assertThat(numberOfEntries.block()).isEqualTo(5);
+  }
+
+  @Test
+  public void creatingFluxRangeFromOneToTen() {
+    Flux<Integer> numbersFromOneToTen = Flux.range(1, 10);
+    numbersFromOneToTen
+      .map(number -> {
+        assertThat(number).isBetween(1, 10);
+        return number;
+      })
+      .subscribe(System.out::println);
+  }
+
+  @Test
+  public void creatingFluxFromIterable() {
+    List<String> names = Arrays.asList("Bryan", "Dominic",
+      "Arlyne", "Truman", "Audie");
+    Flux<String> flux = Flux.fromIterable(names);
+    Mono<Long> numberOfEntries = flux.count();
+    assertThat(numberOfEntries.block()).isEqualTo(5);
   }
 
 }

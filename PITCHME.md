@@ -121,17 +121,17 @@ Note:
 
 ### Erzeugen von Publisher
 
-@[58](Mono erzeugen)
-@[52](Mono ohne Inhalt erzeugen)
-@[44-45](Flux erzeugen)
-@[33](Flux als Bereich erzeugen)
-@[24-26](Flux mit Iterable erzeugen)
+@[24](Mono erzeugen)
+@[30](Mono ohne Inhalt erzeugen)
+@[43-45](Flux erzeugen)
+@[51](Flux als Bereich erzeugen)
+@[62-64](Flux mit Iterable erzeugen)
 
 +++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoSubscribeTest.java
 
 @[14-20](ohne 'Subscriber' passiert nichts)
 @[26-36](cold Publisher)
-@[42-62](hot Publisher)
+@[41-53](hot Publisher)
 
 ### Interaktion - Subscribe
 
