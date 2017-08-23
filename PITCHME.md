@@ -36,7 +36,7 @@
 
 <ul>
     <li class="fragment">Programmierparadigma</li>
-    <li class="fragment">Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET</li>
+    <li class="fragment">Pionierarbeit: Reactive Extensions (Rx) für .NET</li>
     <li class="fragment">Standardisierung für JVM durch <a target="_blank" href="https://github.com/reactive-streams/reactive-streams-jvm">Reactive Streams</a></li>
 </ul>
 
@@ -49,13 +49,14 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 +++
 
-### [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
-#### Interfaces
+## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+### Interfaces
 
 - Publisher
 - Subscriber
 - Subscription
 - Processor
+- Implementierungsrichtlinien
 
 +++
 
@@ -69,21 +70,21 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
     <th>Reactor 3</th> 
   </tr>
   <tr>
-    <td>Java Version</td>
+    <td>Java</td>
     <td>6+</td>
     <td>9+</td>
     <td>8+</td>
   </tr>
   <tr>
-    <td>Publisher Typen</td>
+    <td>Publisher</td>
     <td>Flowable, Observable, Single, Maybe, Completable</td>
-    <td>implement Publisher</td>
+    <td>implement</td>
     <td>Mono, Flux</td>
    </tr>
   <tr>
-    <td>Subscriber Typen</td>
+    <td>Subscriber</td>
     <td>...</td>
-    <td>implement Subscriber</td>
+    <td>implement</td>
     <td>...</td>
    </tr>
 </table>
@@ -100,11 +101,11 @@ Note:
 ### Erzeugen von Publisher
 
 ---?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
-@[56](Mono erzeugen)
-@[50](Mono ohne Inhalt erzeugen)
-@[43-44](Flux erzeugen)
-@[33](Flux als Bereich erzeugen)
-@[24-26](Flux mit Iterable erzeugen)
+@[57](Mono erzeugen)
+@[51](Mono ohne Inhalt erzeugen)
+@[44-45](Flux erzeugen)
+@[34](Flux als Bereich erzeugen)
+@[25-27](Flux mit Iterable erzeugen)
 
 +++
 
@@ -120,21 +121,19 @@ Note:
 
 +++
 
-### ...
+### Container
+
+ab Servlet Version 3.1
 
 - Tomcat
 - Jetty
 - Netty
 - Undertow
 
++++
+
 ### Datenbanken 
 
 - MongoDB
 - Apache Cassandra
 - Redis
-
----
-
-### 
-
-- 
