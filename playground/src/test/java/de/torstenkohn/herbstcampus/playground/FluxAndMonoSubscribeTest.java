@@ -45,12 +45,10 @@ public class FluxAndMonoSubscribeTest {
     Flux<String> flux = hot.publish().autoConnect()
       .map(String::toUpperCase);
     hot.onNext("Go");
-
     flux.subscribe(name ->
       System.out.println("subscribe 1: " + name));
     hot.onNext("Scala");
     hot.onNext("TypeScript");
-
     flux.subscribe(name ->
       System.out.println("subscribe 2: " + name));
     hot.onNext("Closure");

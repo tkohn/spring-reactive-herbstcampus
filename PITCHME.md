@@ -131,7 +131,7 @@ Note:
 
 @[14-20](ohne 'Subscriber' passiert nichts)
 @[26-36](cold Publisher)
-@[42-57](hot Publisher)
+@[42-55](hot Publisher)
 
 ### Interaktion - Subscribe
 
