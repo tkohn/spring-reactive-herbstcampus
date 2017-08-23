@@ -129,9 +129,9 @@ Note:
 
 +++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoSubscribeTest.java
 
-@[14-20](ohne .subscribe() passiert nichts)
-@[26-36](cold publisher)
-@[42-62](hot publisher)
+@[14-20](ohne 'Subscriber' passiert nichts)
+@[26-36](cold Publisher)
+@[42-62](hot Publisher)
 
 ### Interaktion - Subscribe
 
@@ -139,7 +139,7 @@ Note:
 
 @[15-26](verhält sich wie try/catch)
 @[31-42](Default zurückgeben)
-@[47-56](Sequenz wiederholen )
+@[47-56](Sequenz wiederholen)
 
 ### Error Handling
 
