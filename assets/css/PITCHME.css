@@ -5,6 +5,13 @@
     height: 70%;
 }
 
+.company-picture{
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    height: 70%;
+}
+
 .reveal section img {
     border: 0;
     box-shadow: none;
