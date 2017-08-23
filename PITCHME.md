@@ -7,8 +7,8 @@
 ### Torsten Kohn
 ##### Lean Java Expert
 ##### bei comSysto GmbH in München
-
-* <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn) <!-- .element: class="hide-list-style-type" -->
+<!-- .element: class="hide-list-style-type" -->
+* <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
 * <i class="fa fa-github-square"></i> [tkohn](https://github.com/tkohn)
 * <i class="fa fa-xing-square"></i> [Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
 
