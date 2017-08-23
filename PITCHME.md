@@ -19,10 +19,13 @@
 
 * Einführung
  * Was ist Reaktive Programmierung?
- * Vor- und Nachteile
+ * Reactive Streams
  * Implementierungen
-* Code-Beispiele mit Reactor
-* Demo - Reactive Programmierung mit Spring
+* Code-Beispiele - Reactor
+* Reactive Programmierung mit Spring
+ * Demo
+ * Voraussetzungen
+* Fazit
 
 ---
 
@@ -36,9 +39,9 @@
 > This means that the underlying execution model will automatically propagate changes through the data flow.
 
 <ul>
-    <li class="fragment">Programmierparadigma</li>
-    <li class="fragment">Pionierarbeit: Reactive Extensions (Rx) für .NET</li>
-    <li class="fragment">Standardisierung für JVM durch <a target="_blank" href="https://github.com/reactive-streams/reactive-streams-jvm">Reactive Streams</a></li>
+  <li class="fragment">Programmierparadigma</li>
+  <li class="fragment">Pionierarbeit: Reactive Extensions (Rx) für .NET</li>
+  <li class="fragment">Standardisierung für JVM durch <a target="_blank" href="https://github.com/reactive-streams/reactive-streams-jvm">Reactive Streams</a></li>
 </ul>
 
 Note:
@@ -112,13 +115,11 @@ Note:
 
 ---
 
-### Code-Beispiele mit Reactor
+### Code-Beispiele - Reactor
 
-+++
++++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
 
 ### Erzeugen von Publisher
-
----?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
 
 @[58](Mono erzeugen)
 @[52](Mono ohne Inhalt erzeugen)
@@ -128,15 +129,19 @@ Note:
 
 +++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoSubscribeTest.java
 
+@[14-20](ohne .subscribe() passiert nichts)
+@[26-36](cold publisher)
+@[42-62](hot publisher)
+
 ### Interaktion - Subscribe
 
-@[14-20]
-@[26-36]
-@[42-62]
++++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/ErrorHandlingTests.java
 
-+++
+@[15-26](verhält sich wie try/catch)
+@[31-42](Default zurückgeben)
+@[47-56](Sequenz wiederholen )
 
-### Was passiert im Fehlerfall
+### Error Handling
 
 ---
 
@@ -153,7 +158,7 @@ Note:
 
 +++
 
-### Container Voraussetzungen
+### Container - Voraussetzungen
 
 ab Servlet Version 3.1
 
@@ -164,7 +169,7 @@ ab Servlet Version 3.1
 
 +++
 
-### Datenbanken Voraussetzungen
+### Datenbank - Voraussetzungen
 
 - MongoDB
 - Apache Cassandra
@@ -184,7 +189,7 @@ TODO - Zusammenfassung
 
 ### Wann lohnt sich der Einsatz?
 
-- Technologien entscheiden
+- Technologien
 - Wissen der Mitarbeiter
 
 Note:
