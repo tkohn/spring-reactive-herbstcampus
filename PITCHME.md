@@ -16,7 +16,7 @@
 
 ### Inhalt
 
-* Einleitung
+* Einführung
  * Was ist Reaktive Programmierung?
  * Vor- und Nachteile
  * Implementierungen
@@ -25,11 +25,11 @@
 
 ---
 
-### Einleitung
+# Einführung
 
 +++
 
-### Was ist Reaktive Programmierung?
+## Was ist Reaktive Programmierung?
 
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
@@ -56,7 +56,24 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 - Subscriber
 - Subscription
 - Processor
-- Implementierungsrichtlinien
+
+Note:
+Zusätzlich gibt es Implementierungsrichtlinien.
+RxJava, Reactor und Java 9 halten sich an der Spezifikation
+
++++
+
+## Buzzwords
+
+- Backpressure
+- hot & cold Publisher
+
+Note:
+Backpressure
+ - PUSH: Publisher schickt schneller Daten als der Subscriber Verarbeiten kann -> Subscriber informiert Publisher darüber 
+hot vs cold
+- cold: Eine 'cold'-Sequenz startet immer einen neuen Subscriber mit den Daten
+-  hot: Bei 'hot' erhölt man die Daten ab dem Punkt an dem man subscribed, man bekommt daher nicht alle Daten mit
 
 +++
 
@@ -78,14 +95,14 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
   <tr>
     <td>Publisher</td>
     <td>Flowable, Observable, Single, Maybe, Completable</td>
-    <td>implement</td>
+    <td>selbst implementieren</td>
     <td>Mono, Flux</td>
    </tr>
   <tr>
     <td>Subscriber</td>
     <td>...</td>
-    <td>implement</td>
-    <td>...</td>
+    <td>selbst implementieren</td>
+    <td>viele vorhanden</td>
    </tr>
 </table>
 
@@ -117,11 +134,15 @@ Note:
 
 ---
 
-### Reaktive Programmierung mit Spring
+# Reaktive Programmierung mit Spring
 
 +++
 
-### Container
+### Demo
+
++++
+
+### Container Voraussetzungen
 
 ab Servlet Version 3.1
 
@@ -132,8 +153,20 @@ ab Servlet Version 3.1
 
 +++
 
-### Datenbanken 
+### Datenbanken Voraussetzungen
 
 - MongoDB
 - Apache Cassandra
 - Redis
+
+---
+
+## Quellen
+
+* [Reactor 3 Reference Guide](https://projectreactor.io/docs/core/release/reference/)
+* [RxJava](https://github.com/ReactiveX/RxJava)
+* [JDK 9 Flow API](https://community.oracle.com/docs/DOC-1006738)
+* [InfoQ - Reactor by Example](https://www.infoq.com/articles/reactor-by-example)
+* [Devoxx - Video: Reactive Spring](https://www.youtube.com/watch?v=TZUZgU6rsNY)
+* [Spring - Notes on Reactive Programming](https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape)
+
