@@ -7,9 +7,9 @@
 
 .company-picture {
     position: absolute;
-    left: -20%;
-    height: 30%;
-    width: auto;
+    left: -15%;
+    height: auto;
+    width: 40%;
     bottom: 30%;
 }
 
