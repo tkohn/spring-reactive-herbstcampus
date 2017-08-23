@@ -1,15 +1,16 @@
-.profile-picture{
+.profile-picture {
     position: absolute;
-    top: 50px;
-    right: 8px;
-    height: 70%;
+    top: 5%;
+    left: 80%;
+    height: 80%;
 }
 
-.company-picture{
+.company-picture {
     position: absolute;
-    bottom: 0;
-    left: 8px;
-    height: 70%;
+    left: -20%;
+    height: 30%;
+    width: auto;
+    bottom: 30%;
 }
 
 .reveal section img {
@@ -17,6 +18,6 @@
     box-shadow: none;
 }
 
-.reveal section  ul{
+.reveal section ul {
     list-style-type: none;
 }
