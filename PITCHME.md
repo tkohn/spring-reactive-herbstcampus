@@ -24,16 +24,14 @@
 +++
 
 ### Torsten Kohn
+##### Lean Java Expert
+##### bei comSysto GmbH in München
 
 * <i class="fa fa-twitter-square"></i> [@TorstenKohn](https://twitter.com/TorstenKohn)
 * <i class="fa fa-github-square"></i> [tkohn](https://github.com/tkohn)
 * <i class="fa fa-xing-square"></i> [Torsten_Kohn4](https://www.xing.com/profile/Torsten_Kohn4)
 
 <img class="profile-picture" src="/assets/profil_tk.jpg" alt="Profilbild von Torsten Kohn">
-
-+++
-
-### comSysto
 
 ---
 
@@ -42,6 +40,21 @@
 +++
 
 ### Was ist Reaktive Programmierung?
+
+* Programmierparadigma
+* Pionierarbeit: Reactive Extensions (Rx) Bibliothek für .NET
+* Standardisierung durch Reactive Streams:
+ * Interfaces & Interaktionsregeln für die JVM
+
+> Reactive programming is oriented around data flows and the propagation of change. 
+> This means that the underlying execution model will automatically propagate changes through the data flow.
+
+Note:
+Programmierparadigma, welches sich an Datenflüsse orientiert.
+Änderungen in den Datenflüssen automatisch propagiert.
+Beispiel: Excel - Wert in Zelle ändert sich und Summenzelle wird neu berechnet
+Interfaces & Interaktionsregeln finden sich auch in Java 9 (Flow) wieder
+Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 +++
 
