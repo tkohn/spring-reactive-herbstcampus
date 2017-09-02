@@ -40,18 +40,16 @@ public class FluxAndMonoSubscribeTest {
   @Test
   public void hotSubscriberTest() {
     UnicastProcessor<String> hot = UnicastProcessor.create();
-    hot.onNext("Java");
-    hot.onNext("C++");
     Flux<String> flux = hot.publish().autoConnect()
       .map(String::toUpperCase);
-    hot.onNext("Go");
     flux.subscribe(name ->
       System.out.println("subscribe 1: " + name));
+    hot.onNext("Go");
     hot.onNext("Scala");
     hot.onNext("TypeScript");
     flux.subscribe(name ->
       System.out.println("subscribe 2: " + name));
-    hot.onNext("Closure");
+    hot.onNext("Clojure");
     hot.onNext("php");
   }
 
