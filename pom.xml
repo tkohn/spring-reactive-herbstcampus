@@ -11,6 +11,7 @@
 
     <modules>
     <module>/playground</module>
+    <module>/schnick-schnack-schnuck-backend</module>
     </modules>
 
 </project>
