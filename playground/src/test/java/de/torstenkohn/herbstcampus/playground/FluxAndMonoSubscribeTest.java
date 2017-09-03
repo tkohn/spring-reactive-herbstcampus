@@ -4,9 +4,7 @@ import org.junit.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.UnicastProcessor;
 
-/**
- * @author Torsten Kohn
- */
+
 public class FluxAndMonoSubscribeTest {
 
   @Test

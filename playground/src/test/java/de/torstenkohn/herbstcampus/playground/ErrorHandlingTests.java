@@ -5,9 +5,7 @@ import reactor.core.publisher.Flux;
 
 import java.time.Duration;
 
-/**
- * @author Torsten Kohn
- */
+
 public class ErrorHandlingTests {
 
   @Test
