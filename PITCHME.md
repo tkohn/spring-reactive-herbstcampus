@@ -12,6 +12,7 @@
   <li><i class="fa fa-github-square"></i> <a target="_blank" href="https://github.com/tkohn">tkohn</a></li>
   <li><i class="fa fa-xing-square"></i> <a target="_blank" href="https://www.xing.com/profile/Torsten_Kohn4">Torsten_Kohn4</a></li>
   <li><i class="fa fa-building-o"></i> <a target="_blank" href="https://comsysto.com/">comSysto</a></li>
+  <li><i class="fa fa-info-circle"></i> <a target="_blank" href="https://comsysto.com/veranstaltung/arbeiten-bei-comsysto">22.09. Tag der offenen Tür</a></li>
 </ul>
 +++
 
@@ -29,7 +30,7 @@
 
 ---
 
-# Einführung
+## Einführung
 
 +++
 
@@ -64,6 +65,10 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 Note:
 Zusätzlich gibt es Implementierungsrichtlinien.
 RxJava, Reactor und Java 9 halten sich an der Spezifikation
+
+- Publisher is a provider of data
+- Subscriber 
+- Processor erbt von Publisher und Subscriber
 
 +++
 
@@ -158,7 +163,7 @@ Note:
 
 +++
 
-### Container - Voraussetzungen
+### unterstütze Container
 
 ab Servlet Version 3.1
 
@@ -169,7 +174,7 @@ ab Servlet Version 3.1
 
 +++
 
-### Datenbank - Voraussetzungen
+### unterstütze Datenbanken
 
 - MongoDB
 - Apache Cassandra
@@ -189,7 +194,7 @@ TODO - Zusammenfassung
 
 ### Wann lohnt sich der Einsatz?
 
-- Technologien
+- eingesetzte Technologien
 - Wissen der Mitarbeiter
 
 Note:
