@@ -58,6 +58,9 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 +++
 
 ## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+
++++
+
 ### Publisher<T>
 
 ```
@@ -78,7 +81,6 @@ Beispiel Reactor: Flux, Mono
 
 +++
 
-## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
 ### Subscription
 
 ```
@@ -97,7 +99,6 @@ Note:
 
 +++
 
-## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
 ### Subscriber<T>
 
 ```
@@ -117,7 +118,6 @@ Note:
 
 +++
 
-## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
 ### Processor
 
 - erbt von Publisher und Subscriber
