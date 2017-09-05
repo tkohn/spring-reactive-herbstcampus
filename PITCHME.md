@@ -48,34 +48,90 @@
 Note:
 Programmierparadigma, welches sich an Datenflüsse orientiert.
 Änderungen in den Datenflüssen automatisch propagiert.
+
 Beispiel: Excel - Wert in Zelle ändert sich und Summenzelle wird neu berechnet
+
 Observer pattern + Iterator pattern + functional programming = reactive programming
+
 Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 +++
 
 ## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
-### Interfaces
+### Publisher<T>
 
-- Publisher
-- Subscriber
-- Subscription
-- Processor
+```
+public void subscribe(Subscriber<? super T> s);
+
+```
+
+- stellt eine Anzahl von (unbegrenzten) Elementen bereit |
+- Subscriber können diese Elemente konsumieren |
+- Subscriber können dynamisch und zu unterschiedlichen Zeiten Elemente erhalten |
 
 Note:
 Zusätzlich gibt es Implementierungsrichtlinien.
 RxJava, Reactor und Java 9 halten sich an der Spezifikation
+Beispiel Reactor: Flux, Mono
 
-- Publisher is a provider of data
-- Subscriber 
-- Processor erbt von Publisher und Subscriber
+- 
+
++++
+
+## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+### Subscription
+
+```
+public void request(long n);
+
+public void cancel();
+
+```
+
+- stellt 1:1 Lebenszyklus eines Subscriber dar
+- kann nur einmal von einem Subscriber verwendet werden
+
+Note:
+
+-
+
++++
+
+## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+### Subscriber<T>
+
+```
+public void onSubscribe(Subscription s);
+
+public void onNext(T t);
+
+public void onError(Throwable t);
+
+public void onComplete();
+
+```
+
+Note:
+
+-
+
++++
+
+## [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm) Spezifikation
+### Processor
+
+- erbt von Publisher und Subscriber
+
+Note:
+Verhält sich gleizeitig als Publisher und Subscriber und hat jeweils die Regeln einzuhalten.
+Beispiel Reactor: 
 
 +++
 
 ## Buzzwords
 
 - Backpressure
-- hot & cold Publisher
+- hot & cold
 
 Note:
 Backpressure

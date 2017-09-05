@@ -2,3 +2,4 @@ theme : moon
 slide-number: true
 footnote : "Torsten Kohn | Reaktive Programmierung mit Java und Spring | Herbstcampus 2017"
 theme-override : assets/css/PITCHME.css
+remote-control: true
