@@ -199,7 +199,7 @@ Flux<String> flux = Flux.just("Java", "Go", "Assembler",
 
 ### Publisher subscribe
 
-```
+```Java
 Flux<String> flux = Flux.just("Java", "Go", "Assembler",
   "php", "Ada", "Kotlin", "Clojure")
   .doOnNext(System.out::println)
@@ -211,7 +211,7 @@ Flux<String> flux = Flux.just("Java", "Go", "Assembler",
 
 Ausgabe:
 
-```
+```Text
 Java
 Go
 Assembler
