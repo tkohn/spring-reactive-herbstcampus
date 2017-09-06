@@ -268,14 +268,14 @@ hot.onNext("Clojure");
 hot.onNext("Java");
 ```
 
-<code class="fragment nohighlight">
+<pre><code class="fragment">
 subscribe 1: GO
 subscribe 1: SCALA
 subscribe 1: CLOJURE
 subscribe 2: CLOJURE
 subscribe 1: JAVA
 subscribe 2: JAVA
-</code>
+</code></pre>
 
 
 ### Error Handling
