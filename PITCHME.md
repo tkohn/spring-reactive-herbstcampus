@@ -209,9 +209,7 @@ Flux<String> flux = Flux.just("Java", "Go", "Assembler",
   flux.subscribe(item -> System.out.println("Subscriber: " + item));
 ```
 
-Ausgabe:
-
-```Text
+```Text |
 Java
 Go
 Assembler
@@ -224,6 +222,60 @@ Clojure
 ```
 
 +++
+
+### cold Publisher
+
+```
+Flux<String> flux = Flux.just("Go", "ColdFusion",
+  "Java", "C", "JavaScript", "Clojure")
+  .doOnNext(System.out::println)
+  .filter(name -> name.startsWith("C"))
+  .map(String::toUpperCase);
+
+flux.subscribe(name ->
+  System.out.println("subscribe 1: " + name));
+
+flux.subscribe(name ->
+  System.out.println("subscribe 2: " + name));
+```
+
+```Text |
+Go
+Java
+Clojure
+subscribe 1: CLOJURE
+Go
+Java
+Clojure
+subscribe 2: CLOJURE
+```
+
++++
+
+### hot Publisher
+
+```Java
+UnicastProcessor<String> hot = UnicastProcessor.create();
+Flux<String> flux = hot.publish().autoConnect()
+  .map(String::toUpperCase);
+flux.subscribe(name ->
+  System.out.println("subscribe 1: " + name));
+hot.onNext("Go");
+hot.onNext("Scala");
+flux.subscribe(name ->
+  System.out.println("subscribe 2: " + name));
+hot.onNext("Clojure");
+hot.onNext("Java");
+```
+
+``` Text |
+subscribe 1: GO
+subscribe 1: SCALA
+subscribe 1: CLOJURE
+subscribe 2: CLOJURE
+subscribe 1: JAVA
+subscribe 2: JAVA
+```
 
 
 ### Error Handling
