@@ -209,7 +209,7 @@ Flux<String> flux = Flux.just("Java", "Go", "Assembler",
   flux.subscribe(item -> System.out.println("Subscriber: " + item));
 ```
 
-```Text |
+<code class="fragment">
 Java
 Go
 Assembler
@@ -219,7 +219,7 @@ Ada
 Subscriber: ADA
 Kotlin
 Clojure
-```
+</code>
 
 +++
 
@@ -239,7 +239,7 @@ flux.subscribe(name ->
   System.out.println("subscribe 2: " + name));
 ```
 
-```Text |
+<code class="fragment">
 Go
 Java
 Clojure
@@ -248,7 +248,7 @@ Go
 Java
 Clojure
 subscribe 2: CLOJURE
-```
+</code>
 
 +++
 
@@ -268,14 +268,14 @@ hot.onNext("Clojure");
 hot.onNext("Java");
 ```
 
-``` Text |
+<code class="fragment nohighlight">
 subscribe 1: GO
 subscribe 1: SCALA
 subscribe 1: CLOJURE
 subscribe 2: CLOJURE
 subscribe 1: JAVA
 subscribe 2: JAVA
-```
+</code>
 
 
 ### Error Handling
