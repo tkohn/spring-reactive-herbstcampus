@@ -178,29 +178,53 @@ Note:
 
 ### Code-Beispiele - Reactor
 
-+++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoCreateTests.java
++++
 
-### Erzeugen von Publisher
+### Publisher
 
-@[24](Mono erzeugen)
-@[30](Mono ohne Inhalt erzeugen)
-@[43-45](Flux erzeugen)
-@[51](Flux als Bereich erzeugen)
-@[62-64](Flux mit Iterable erzeugen)
+```
+Flux<String> flux = Flux.just("Java", "Go", "Assembler",
+  "php", "Ada", "Kotlin", "Clojure")
+  .doOnNext(System.out::println)
+  .filter(name -> name.startsWith("A"))
+  .map(String::toUpperCase);
+```
 
-+++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/FluxAndMonoSubscribeTest.java
+- keine Ausgabe vorhanden |
 
-@[14-20](ohne 'Subscriber' passiert nichts)
-@[26-36](cold Publisher)
-@[42-55](hot Publisher)
 
-### Interaktion - Subscribe
 
-+++?code=playground/src/test/java/de/torstenkohn/herbstcampus/playground/ErrorHandlingTests.java
++++
 
-@[15-28](verhält sich wie try/catch)
-@[33-47](Default zurückgeben)
-@[52-61](Sequenz wiederholen)
+
+### Publisher subscribe
+
+```
+Flux<String> flux = Flux.just("Java", "Go", "Assembler",
+  "php", "Ada", "Kotlin", "Clojure")
+  .doOnNext(System.out::println)
+  .filter(name -> name.startsWith("A"))
+  .map(String::toUpperCase);
+  
+  flux.subscribe(item -> System.out.println("Subscriber: " + item));
+```
+
+Ausgabe:
+
+```
+Java
+Go
+Assembler
+Subscriber: ASSEMBLER
+php
+Ada
+Subscriber: ADA
+Kotlin
+Clojure
+```
+
++++
+
 
 ### Error Handling
 

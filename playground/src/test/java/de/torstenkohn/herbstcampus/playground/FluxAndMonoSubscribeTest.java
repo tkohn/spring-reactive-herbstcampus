@@ -10,12 +10,12 @@ public class FluxAndMonoSubscribeTest {
   @Test
   public void simpleSubscriberTest() {
     Flux<String> flux = Flux.just("Java", "Go", "Assembler",
-      "php", "Ada")
+      "php", "Ada", "Kotlin", "Clojure")
       .doOnNext(System.out::println)
       .filter(name -> name.startsWith("A"))
       .map(String::toUpperCase);
-    flux.subscribe(name ->
-      System.out.println("Subscriber: " + name));
+
+    flux.subscribe(item -> System.out.println("Subscriber: " + item));
   }
 
 
