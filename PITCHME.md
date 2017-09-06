@@ -22,7 +22,7 @@
 * Einführung
  * Was ist Reaktive Programmierung?
  * Reactive Streams Spezifikation
- * Vergleich Implementierungen
+ * Implementierungen
 * Code-Beispiele - Reactor
 * Reaktive Programmierung mit Spring
  * Demo
@@ -37,7 +37,6 @@
 
 ## Was ist Reaktive Programmierung?
 
-<a target="_blank" href="https://projectreactor.io/docs/core/release/reference/#intro-reactive">Project Reactor:</a>
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
 
@@ -150,33 +149,33 @@ hot vs cold
 
 +++
 
-### Vergleich Implementierungen
+### Implementierungen
 
 <table>
-  <tr>
-    <th></th>
-    <th>RxJava 2</th>
-    <th>Java 9 Flow</th>
-    <th>Reactor 3</th> 
-  </tr>
-  <tr class="fragment">
-    <td>Java</td>
-    <td>6+</td>
-    <td>9+</td>
-    <td>8+</td>
-  </tr>
-  <tr class="fragment">
-    <td>Publisher</td>
-    <td>Flowable, Observable, Single, Maybe, Completable</td>
-    <td>selbst implementieren</td>
-    <td>Mono, Flux</td>
-   </tr>
-  <tr class="fragment">
-    <td>Subscriber</td>
-    <td>...</td>
-    <td>selbst implementieren</td>
-    <td>viele vorhanden</td>
-   </tr>
+ <tr>
+  <th></th>
+  <th>RxJava 2</th>
+  <th>Java 9 Flow</th>
+  <th>Reactor 3</th> 
+ </tr>
+ <tr class="fragment">
+  <td>Java</td>
+  <td>6+</td>
+  <td>9+</td>
+  <td>8+</td>
+ </tr>
+ <tr class="fragment">
+  <td>Publisher</td>
+  <td>Flowable, Observable, Single, Maybe, Completable</td>
+  <td>selbst implementieren</td>
+  <td>Mono, Flux</td>
+ </tr>
+ <tr class="fragment">
+  <td>Subscriber</td>
+  <td>...</td>
+  <td>selbst implementieren</td>
+  <td>viele vorhanden</td>
+ </tr>
 </table>
 
 Note:
@@ -341,6 +340,9 @@ Note:
 Note:
 Wenn an unterester Stelle eine reaktive Komponente (z. B. MongoDB) verwendet wird, 
 dann sollte man darauf aufbauen und reaktiv Entwickeln
+- External Service Calls -> REST
+- Highly Concurrent Message Consumers
+- Spreadsheets
 
 +++
 
