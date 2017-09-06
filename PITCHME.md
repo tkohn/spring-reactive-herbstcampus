@@ -14,6 +14,7 @@
   <li><i class="fa fa-building-o"></i> <a target="_blank" href="https://comsysto.com/">comSysto</a></li>
   <li><i class="fa fa-info-circle"></i> <a target="_blank" href="https://comsysto.com/veranstaltung/arbeiten-bei-comsysto">22.09. Tag der offenen Tür</a></li>
 </ul>
+
 +++
 
 ### Inhalt
@@ -36,6 +37,7 @@
 
 ## Was ist Reaktive Programmierung?
 
+<a target="_blank" href="https://projectreactor.io/docs/core/release/reference/#intro-reactive">Project Reactor:</a>
 > Reactive programming is oriented around data flows and the propagation of change. 
 > This means that the underlying execution model will automatically propagate changes through the data flow.
 
@@ -77,8 +79,7 @@ Zusätzlich gibt es Implementierungsrichtlinien.
 RxJava, Reactor und Java 9 halten sich an der Spezifikation
 Beispiel Reactor: Flux, Mono
 
-- 
-
+- subscribe() - Request to start streaming data
 +++
 
 ### Subscription
@@ -95,7 +96,9 @@ public void cancel();
 
 Note:
 
--
+- request(n) aktiviert den Publisher zum senden von Elementen an den Subscriber, 
+Ende muss mit Aufruf von onComplete/onError signalisiert werden
+- cancel() Publisher wird benachrichtigt keine weiteren Elemente zu senden und die Resourcen aufzuräumen
 
 +++
 
@@ -112,9 +115,14 @@ public void onComplete();
 
 ```
 
+
 Note:
 
--
+- onSubscribe() wird ausgelöst nachdem Publisher#subscribe mit dem Subscriber aufgerufen wurden, 
+es werden keine Elemente übertragen
+- onNext() wird durch den Publisher ausgelöst (Notification), damit der Subscriber request() nutzt
+- onError() Fehlerfall - keine Events folgen, Aufruf von request() ändert nichts daran
+- onComplete() Erfolgreich - keine Events folgen, Aufruf von request() ändert nichts daran
 
 +++
 
@@ -130,12 +138,12 @@ Beispiel Reactor:
 
 ## Buzzwords
 
-- Backpressure
-- hot & cold
+- Backpressure |
+- hot & cold |
 
 Note:
 Backpressure
- - PUSH: Publisher schickt schneller Daten als der Subscriber Verarbeiten kann -> Subscriber informiert Publisher darüber 
+ - PUSH: Publisher schickt schneller Daten als der Subscriber Verarbeiten kann -> Subscriber informiert Publisher darüber
 hot vs cold
 - cold: Eine 'cold'-Sequenz startet immer einen neuen Subscriber mit den Daten
 -  hot: Bei 'hot' erhölt man die Daten ab dem Punkt an dem man subscribed, man bekommt daher nicht alle Daten mit
@@ -172,7 +180,6 @@ hot vs cold
 </table>
 
 Note:
-...
 
 ---
 
@@ -271,17 +278,15 @@ subscribe 2: CLOJURE
 subscribe 1: JAVA
 subscribe 2: JAVA</code></pre>
 
-
-### Error Handling
-
 ---
 
 ## Reaktive Programmierung 
 ### mit Java und Spring
 
 - Spring Framework von Pivotal |
-- Open Source - Apache License |
 - nutzt Reactor |
+- Spring 5.0 GA -> 21. September |
+- Spring Boot 2.0 -> 20. November |
 
 +++
 
@@ -314,17 +319,27 @@ JDBC soll evtl. in einer reaktiven Version kommen
 # Fazit
 
 Note:
-TODO - Zusammenfassung
+- Reaktive Programmierung ist nicht die Lösung für alles
+- Kann die Programmierung angenehmer machen und dient als Alternative 
+  zu Parallelität (mehr Threads, mehr Hardware) und Asynchrone Programmierung -> Callbacks, Future
+- Publisher (Flux, Mono)
+- ohne subscribe() Aufruf passiert nichts
+- Blockierender Code kann Gesamte Performance beeinträchtigen
+  
 
 +++
 
 ### Wann lohnt sich der Einsatz?
 
 - eingesetzte Technologien
-- Wissen der Mitarbeiter
+ - Container |
+ - Datenbank |
+- Skalierung wird benötigt durch blockierende Resourcen |
+- Wissen der Mitarbeiter |
+
 
 Note:
-Wenn an unterester Stelle eine reaktive Komponente (MongoDB) verwendet wird, 
+Wenn an unterester Stelle eine reaktive Komponente (z. B. MongoDB) verwendet wird, 
 dann sollte man darauf aufbauen und reaktiv Entwickeln
 
 +++
