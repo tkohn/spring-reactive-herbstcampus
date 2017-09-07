@@ -64,16 +64,18 @@ Source: https://projectreactor.io/docs/core/release/reference/#intro-reactive
 
 ### Publisher<T>
 
-```
-public void subscribe(Subscriber<? super T> s);
+```Java
+public interface Publisher<T> {
+    public void subscribe(Subscriber<? super T> s);
+}
 
 ```
 
+Note:
 - stellt eine Anzahl von (unbegrenzten) Elementen bereit |
 - Subscriber können diese Elemente konsumieren |
 - Subscriber können dynamisch und zu unterschiedlichen Zeiten Elemente erhalten |
 
-Note:
 Zusätzlich gibt es Implementierungsrichtlinien.
 RxJava, Reactor und Java 9 halten sich an der Spezifikation
 Beispiel Reactor: Flux, Mono
@@ -83,17 +85,19 @@ Beispiel Reactor: Flux, Mono
 
 ### Subscription
 
+```Java
+public interface Subscription {
+
+    public void request(long n);
+
+    public void cancel();
+}
+
 ```
-public void request(long n);
-
-public void cancel();
-
-```
-
-- stellt 1:1 Lebenszyklus eines Subscriber dar
-- kann nur einmal von einem Subscriber verwendet werden
 
 Note:
+- stellt 1:1 Lebenszyklus eines Subscriber dar
+- kann nur einmal von einem Subscriber verwendet werden
 
 - request(n) aktiviert den Publisher zum senden von Elementen an den Subscriber, 
 Ende muss mit Aufruf von onComplete/onError signalisiert werden
@@ -103,14 +107,17 @@ Ende muss mit Aufruf von onComplete/onError signalisiert werden
 
 ### Subscriber<T>
 
-```
-public void onSubscribe(Subscription s);
+```Java
+public interface Subscriber<T> {
 
-public void onNext(T t);
-
-public void onError(Throwable t);
-
-public void onComplete();
+    public void onSubscribe(Subscription s);
+    
+    public void onNext(T t);
+    
+    public void onError(Throwable t);
+    
+    public void onComplete();
+}
 
 ```
 
@@ -127,7 +134,10 @@ es werden keine Elemente übertragen
 
 ### Processor
 
-- erbt von Publisher und Subscriber
+```Java
+public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
+}
+```
 
 Note:
 Verhält sich gleizeitig als Publisher und Subscriber und hat jeweils die Regeln einzuhalten.
