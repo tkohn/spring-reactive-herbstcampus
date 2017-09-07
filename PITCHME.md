@@ -135,7 +135,9 @@ es werden keine Elemente übertragen
 ### Processor
 
 ```Java
-public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
+public interface Processor<T, R> 
+    extends Subscriber<T>, Publisher<R> {
+  
 }
 ```
 
